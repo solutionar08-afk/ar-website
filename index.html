@@ -117,4 +117,32 @@ footer { background:#003366; color:white; text-align:center; padding:20px; }
 
 <!-- Mobile Accessories -->
 <div id="handfree" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('handfree')">&times;</span><h3>Handfree</h3><img src="https://images.unsplash.com/photo-1596558452549-21cfc6e53c9b" style="width:100%"><p>Price: ₹500</p><p>High-quality handfree for mobile devices.</p></div></div>
-<div id="
+<div id="mobile-cover" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('mobile-cover')">&times;</span><h3>Mobile Cover</h3><img src="https://images.unsplash.com/photo-1611328701963-2f0b4e32d124" style="width:100%"><p>Price: ₹300</p><p>Durable mobile cover to protect your phone.</p></div></div>
+<div id="battery" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('battery')">&times;</span><h3>Battery</h3><img src="https://images.unsplash.com/photo-1606813909073-3ff1b865be5b" style="width:100%"><p>Price: ₹800</p><p>High-performance replacement battery for mobiles.</p></div></div>
+<div id="charging-pin" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('charging-pin')">&times;</span><h3>Charging Pin</h3><img src="https://images.unsplash.com/photo-1595648" style="width:100%"><p>Price: ₹150</p><p>Fast-charging compatible pin for all devices.</p></div></div>
+
+<!-- Mobiles -->
+<div id="iphone" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('iphone')">&times;</span><h3>iPhone</h3><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" style="width:100%"><p>Price: ₹70,000</p><p>Latest model iPhone with amazing features.</p></div></div>
+<div id="samsung" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('samsung')">&times;</span><h3>Samsung</h3><img src="https://images.unsplash.com/photo-1580910051072-ef1a0a8e2b5b" style="width:100%"><p>Price: ₹50,000</p><p>High-end Samsung smartphone with excellent performance.</p></div></div>
+
+<!-- Repairs -->
+<div id="screen-repair" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('screen-repair')">&times;</span><h3>Screen Repair</h3><img src="https://images.unsplash.com/photo-1593005519402-001f8dc822aa" style="width:100%"><p>Price: ₹2000</p><p>Professional screen repair for mobiles and tablets.</p></div></div>
+<div id="battery-repair" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('battery-repair')">&times;</span><h3>Battery Repair</h3><img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" style="width:100%"><p>Price: ₹1000</p><p>Battery replacement and repair services for devices.</p></div></div>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display='flex'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+// Close modal when clicking outside
+window.onclick = function(event){
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal=>{
+    if(event.target===modal){ modal.style.display='none'; }
+  });
+}
+</script>
+
+<footer>
+  © 2025 AR Computer and Mobile Repairing Center | Zahid Raheem & Muhammad Usman
+</footer>
+
+</body>
