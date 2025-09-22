@@ -6,168 +6,115 @@
 <title>AR Computer and Mobile Repairing Center</title>
 <style>
 * {margin:0; padding:0; box-sizing:border-box;}
-html {scroll-behavior:smooth;}
-body {font-family:'Arial',sans-serif; background:#f0f8ff; color:#333; line-height:1.6; transition:0.5s;}
-
-/* Dark Mode */
-body.dark { background:#121212; color:#e0e0e0; }
-body.dark nav { background:#ff8c00; }
-body.dark .section { background:#1e1e1e; box-shadow:0 3px 8px rgba(255,255,255,0.05);}
-body.dark footer { background:#1e1e1e; color:#e0e0e0;}
-
-/* Header */
-header {
-  position:relative; padding:120px 20px 60px; text-align:center; color:white; 
-  display:flex; flex-direction:column; justify-content:center; align-items:center; 
-  background:linear-gradient(rgba(0,0,128,0.6), rgba(255,140,0,0.6)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
-}
-header h1 { font-size:36px; margin-bottom:15px; text-shadow:2px2px6px rgba(0,0,0,0.7);}
-header p { font-size:18px; text-shadow:1px1px4px rgba(0,0,0,0.7);}
-.header-typing { font-weight:bold; font-size:24px; color:#ffcc00; margin-top:10px; text-shadow:1px1px4px rgba(0,0,0,0.7);}
-
-/* Dark/Light Toggle */
-#mode-toggle { position:absolute; top:20px; right:20px; padding:10px 15px; background:#ff8c00; border:none; border-radius:6px; color:white; font-weight:bold; cursor:pointer; }
-#mode-toggle:hover { background:#ff7000; transform:scale(1.05); }
-
-/* Navigation */
-nav { background:#003366; display:flex; justify-content:center; flex-wrap:wrap; padding:10px 0;}
-nav a { color:white; margin:5px 15px; text-decoration:none; font-weight:bold;}
-nav a:hover { text-decoration:underline; color:#ff8c00; }
-
-/* Container */
+body {font-family:'Arial',sans-serif; background:#f0f8ff; color:#333; line-height:1.6;}
+header {padding:100px 20px 50px; text-align:center; color:white; background:linear-gradient(rgba(0,0,128,0.6), rgba(255,140,0,0.6)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;}
+header h1 { font-size:36px; margin-bottom:10px; }
+header p { font-size:18px; }
+nav { background:#003366; display:flex; justify-content:center; padding:10px 0;}
+nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+nav a:hover { color:#ff8c00; text-decoration:underline; }
 .container { padding:20px; max-width:1200px; margin:auto; }
-
-/* Sections */
-.section { background:white; margin-bottom:30px; padding:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); }
 .section h2 { margin-bottom:15px; color:#003366; }
-
-/* Grid & Items */
-.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:15px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
 .item { background:#fafafa; border-radius:8px; overflow:hidden; border:1px solid #ddd; text-align:center; cursor:pointer; }
 .item img { width:100%; height:150px; object-fit:cover; }
 .item p { padding:10px 0; font-weight:bold; }
-
-/* Footer */
-footer { background:#003366; color:white; text-align:center; padding:20px 10px; font-size:14px; }
-
-/* Floating Social Icons */
-.social-icons { position:fixed; top:50%; left:10px; transform:translateY(-50%); display:flex; flex-direction:column; gap:10px; z-index:1000;}
-.social-icons a { display:block; width:40px; height:40px; background:#ff8c00; color:white; display:flex; align-items:center; justify-content:center; border-radius:50%; font-size:20px; }
-.social-icons a:hover { background:#ff7000; transform:scale(1.2); }
-
-/* Scroll to Top Button */
-#scrollTopBtn { position:fixed; bottom:30px; right:30px; padding:12px 16px; font-size:18px; background:#ff8c00; color:white; border:none; border-radius:50%; cursor:pointer; display:none;}
-#scrollTopBtn:hover { background:#ff7000; transform:scale(1.2); }
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; }
+.modal-content { background:white; padding:20px; border-radius:10px; max-width:400px; text-align:center; position:relative; }
+.close { position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer; }
+footer { background:#003366; color:white; text-align:center; padding:20px; }
 </style>
 </head>
 <body>
 
-<div class="social-icons">
-  <a href="https://wa.me/03247182538" target="_blank" title="WhatsApp">💬</a>
-  <a href="tel:03247182538" title="Call">📞</a>
-</div>
-
 <header>
-  <button id="mode-toggle">Dark Mode</button>
   <h1>📱💻 AR Computer and Mobile Repairing Center</h1>
   <p>Your trusted shop for all computer & mobile solutions</p>
-  <div class="header-typing" id="typing"></div>
 </header>
 
 <nav>
-  <a href="#computers">Computers</a>
   <a href="#computer-accessories">Computer Accessories</a>
   <a href="#mobile-accessories">Mobile Accessories</a>
   <a href="#mobiles">Mobiles</a>
   <a href="#repairs">Repairs</a>
-  <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-  <div id="computers" class="section">
-    <h2>Computers</h2>
-    <div class="grid">
-      <div class="item"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Laptop"><p>Laptop</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Desktop"><p>Desktop</p></div>
-    </div>
-  </div>
-
+  <!-- Computer Accessories -->
   <div id="computer-accessories" class="section">
     <h2>Computer Accessories</h2>
     <div class="grid">
-      <div class="item"><img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7" alt="Speakers"><p>Speakers</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Headphones"><p>Headphones</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1587202372775-98927a7bda95" alt="Gaming Mouse"><p>Gaming Mouse</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b07" alt="Keyboard"><p>Keyboard</p></div>
+      <div class="item" onclick="openModal('speakers')">
+        <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7" alt="Speakers"><p>Speakers</p>
+      </div>
+      <div class="item" onclick="openModal('headphones')">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Headphones"><p>Headphones</p>
+      </div>
+      <div class="item" onclick="openModal('gaming-mouse')">
+        <img src="https://images.unsplash.com/photo-1587202372775-98927a7bda95" alt="Gaming Mouse"><p>Gaming Mouse</p>
+      </div>
+      <div class="item" onclick="openModal('keyboard')">
+        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b07" alt="Keyboard"><p>Keyboard</p>
+      </div>
     </div>
   </div>
 
+  <!-- Mobile Accessories -->
   <div id="mobile-accessories" class="section">
     <h2>Mobile Accessories</h2>
     <div class="grid">
-      <div class="item"><img src="https://images.unsplash.com/photo-1580906855280-73ec1f3d8f54" alt="Chargers"><p>Chargers</p></div>
-      <div class="item"><img src="https://images.unsplash.com/photo-1505740106531-4243f3831c78" alt="Earphones"><p>Earphones</p></div>
+      <div class="item" onclick="openModal('handfree')">
+        <img src="https://images.unsplash.com/photo-1596558452549-21cfc6e53c9b" alt="Handfree"><p>Handfree</p>
+      </div>
+      <div class="item" onclick="openModal('mobile-cover')">
+        <img src="https://images.unsplash.com/photo-1611328701963-2f0b4e32d124" alt="Mobile Cover"><p>Mobile Cover</p>
+      </div>
+      <div class="item" onclick="openModal('battery')">
+        <img src="https://images.unsplash.com/photo-1606813909073-3ff1b865be5b" alt="Battery"><p>Battery</p>
+      </div>
+      <div class="item" onclick="openModal('charging-pin')">
+        <img src="https://images.unsplash.com/photo-1595648" alt="Charging Pin"><p>Charging Pin</p>
+      </div>
     </div>
   </div>
 
+  <!-- Mobiles -->
   <div id="mobiles" class="section">
     <h2>Mobiles</h2>
     <div class="grid">
-      <div class="item"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone"><p>Smartphone</p></div>
+      <div class="item" onclick="openModal('iphone')">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="iPhone"><p>iPhone</p>
+      </div>
+      <div class="item" onclick="openModal('samsung')">
+        <img src="https://images.unsplash.com/photo-1580910051072-ef1a0a8e2b5b" alt="Samsung"><p>Samsung</p>
+      </div>
     </div>
   </div>
 
+  <!-- Repairs -->
   <div id="repairs" class="section">
-    <h2>Repair Services</h2>
+    <h2>Repairs</h2>
     <div class="grid">
-      <div class="item"><img src="https://images.unsplash.com/photo-1581092339609-42e6c1c4f3f8" alt="Repair"><p>Computer & Mobile Repairs</p></div>
+      <div class="item" onclick="openModal('screen-repair')">
+        <img src="https://images.unsplash.com/photo-1593005519402-001f8dc822aa" alt="Screen Repair"><p>Screen Repair</p>
+      </div>
+      <div class="item" onclick="openModal('battery-repair')">
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Battery Repair"><p>Battery Repair</p>
+      </div>
     </div>
-  </div>
-
-  <div id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Visit us at Owais Qasim Market, Near Pervaiz Hospital, Zafarwal</p>
-    <p>Phone: 0324-7182538 / 0312-0680075 / 0311-7897400</p>
   </div>
 
 </div>
 
-<footer>
-  © 2025 AR Computer and Mobile Repairing Center | Zahid Raheem & Muhammad Usman
-</footer>
+<!-- Modals -->
 
-<button id="scrollTopBtn" title="Go to top">⬆️</button>
+<!-- Computer Accessories -->
+<div id="speakers" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('speakers')">&times;</span><h3>Speakers</h3><img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7" style="width:100%"><p>Price: ₹2000</p><p>High-quality stereo speakers for your computer setup.</p></div></div>
+<div id="headphones" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('headphones')">&times;</span><h3>Headphones</h3><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" style="width:100%"><p>Price: ₹1500</p><p>Comfortable over-ear headphones with crystal-clear sound.</p></div></div>
+<div id="gaming-mouse" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('gaming-mouse')">&times;</span><h3>Gaming Mouse</h3><img src="https://images.unsplash.com/photo-1587202372775-98927a7bda95" style="width:100%"><p>Price: ₹1200</p><p>High-precision gaming mouse with RGB lighting.</p></div></div>
+<div id="keyboard" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('keyboard')">&times;</span><h3>Keyboard</h3><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b07" style="width:100%"><p>Price: ₹1000</p><p>Mechanical keyboard for fast typing and gaming.</p></div></div>
 
-<script>
-// Dark/Light Mode Toggle
-const toggleBtn = document.getElementById('mode-toggle');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  toggleBtn.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
-});
-
-// Typing effect
-const typingElement = document.getElementById('typing');
-const texts = ["Computers & Mobiles", "Accessories & Repairs", "Trusted Solutions"];
-let index = 0, charIndex = 0, isDeleting = false;
-function type() {
-  const fullText = texts[index];
-  if(isDeleting){ charIndex--; }
-  else{ charIndex++; }
-  typingElement.textContent = fullText.substring(0,charIndex);
-  if(!isDeleting && charIndex === fullText.length){ isDeleting = true; setTimeout(type,1500);}
-  else if(isDeleting && charIndex === 0){ isDeleting = false; index=(index+1)%texts.length; setTimeout(type,500);}
-  else{ setTimeout(type,isDeleting?50:150); }
-}
-type();
-
-// Scroll to Top Button
-const scrollBtn = document.getElementById("scrollTopBtn");
-window.onscroll = function() {
-  scrollBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
-};
-scrollBtn.addEventListener("click", () => { window.scrollTo({top:0, behavior:'smooth'}); });
-</script>
-</body>
-</html>
+<!-- Mobile Accessories -->
+<div id="handfree" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('handfree')">&times;</span><h3>Handfree</h3><img src="https://images.unsplash.com/photo-1596558452549-21cfc6e53c9b" style="width:100%"><p>Price: ₹500</p><p>High-quality handfree for mobile devices.</p></div></div>
+<div id="
