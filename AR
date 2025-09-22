@@ -1,0 +1,187 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Accessories - AR Repair Center</title>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Arial',sans-serif; background:#f0f8ff; color:#333; line-height:1.6;}
+header {padding:50px 20px; text-align:center; color:white; background:linear-gradient(rgba(0,0,128,0.6), rgba(255,140,0,0.6)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;}
+header h1 { font-size:30px; margin-bottom:10px; }
+nav { background:#003366; display:flex; justify-content:center; flex-wrap:wrap; padding:10px 0;}
+nav a { color:white; margin:5px 15px; text-decoration:none; font-weight:bold;}
+nav a:hover { color:#ff8c00; text-decoration:underline; }
+.container { padding:20px; max-width:1200px; margin:auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+.item { background:#fafafa; border-radius:8px; overflow:hidden; border:1px solid #ddd; text-align:center; cursor:pointer; }
+.item img { width:100%; height:150px; object-fit:cover; }
+.item p { padding:10px 0; font-weight:bold; }
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; }
+.modal-content { background:white; padding:20px; border-radius:10px; max-width:400px; text-align:center; position:relative; }
+.close { position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer; }
+footer { background:#003366; color:white; text-align:center; padding:20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Computer Accessories</h1>
+  <nav>
+    <a href="computer.html">Computer Accessories</a>
+    <a href="mobile.html">Mobile Accessories</a>
+    <a href="repairs.html">Repairs</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="grid">
+    <div class="item" onclick="openModal('speakers')"><img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7" alt="Speakers"><p>Speakers</p></div>
+    <div class="item" onclick="openModal('headphones')"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Headphones"><p>Headphones</p></div>
+    <div class="item" onclick="openModal('gaming-mouse')"><img src="https://images.unsplash.com/photo-1587202372775-98927a7bda95" alt="Gaming Mouse"><p>Gaming Mouse</p></div>
+    <div class="item" onclick="openModal('keyboard')"><img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b07" alt="Keyboard"><p>Keyboard</p></div>
+  </div>
+</div>
+
+<!-- Modals -->
+<div id="speakers" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('speakers')">&times;</span><h3>Speakers</h3><p>Price: ₹2000</p></div></div>
+<div id="headphones" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('headphones')">&times;</span><h3>Headphones</h3><p>Price: ₹1500</p></div></div>
+<div id="gaming-mouse" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('gaming-mouse')">&times;</span><h3>Gaming Mouse</h3><p>Price: ₹1200</p></div></div>
+<div id="keyboard" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('keyboard')">&times;</span><h3>Keyboard</h3><p>Price: ₹1000</p></div></div>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display='flex'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+window.onclick = function(event){
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal=>{ if(event.target===modal){ modal.style.display='none'; } });
+}
+</script>
+
+<footer>
+  © 2025 AR Computer and Mobile Repairing Center | WhatsApp: <a href="https://wa.me/923247182538" target="_blank" style="color:white;">0324-7182538</a>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Accessories & Mobiles - AR Repair Center</title>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Arial',sans-serif; background:#f0f8ff; color:#333; line-height:1.6;}
+header {padding:50px 20px; text-align:center; color:white; background:linear-gradient(rgba(0,0,128,0.6), rgba(255,140,0,0.6)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;}
+header h1 { font-size:30px; margin-bottom:10px; }
+nav { background:#003366; display:flex; justify-content:center; flex-wrap:wrap; padding:10px 0;}
+nav a { color:white; margin:5px 15px; text-decoration:none; font-weight:bold;}
+nav a:hover { color:#ff8c00; text-decoration:underline; }
+.container { padding:20px; max-width:1200px; margin:auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+.item { background:#fafafa; border-radius:8px; overflow:hidden; border:1px solid #ddd; text-align:center; cursor:pointer; }
+.item img { width:100%; height:150px; object-fit:cover; }
+.item p { padding:10px 0; font-weight:bold; }
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; }
+.modal-content { background:white; padding:20px; border-radius:10px; max-width:400px; text-align:center; position:relative; }
+.close { position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer; }
+footer { background:#003366; color:white; text-align:center; padding:20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mobile Accessories & Mobiles</h1>
+  <nav>
+    <a href="computer.html">Computer Accessories</a>
+    <a href="mobile.html">Mobile Accessories</a>
+    <a href="repairs.html">Repairs</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Mobile Accessories</h2>
+  <div class="grid">
+    <div class="item" onclick="openModal('handfree')"><img src="https://images.unsplash.com/photo-1596558452549-21cfc6e53c9b" alt="Handfree"><p>Handfree</p></div>
+    <div class="item" onclick="openModal('mobile-cover')"><img src="https://images.unsplash.com/photo-1611328701963-2f0b4e32d124" alt="Mobile Cover"><p>Mobile Cover</p></div>
+    <div class="item" onclick="openModal('battery')"><img src="https://images.unsplash.com/photo-1606813909073-3ff1b865be5b" alt="Battery"><p>Battery</p></div>
+    <div class="item" onclick="openModal('charging-pin')"><img src="https://images.unsplash.com/photo-1595648" alt="Charging Pin"><p>Charging Pin</p></div>
+  </div>
+
+  <h2>Mobiles</h2>
+  <div class="grid">
+    <div class="item" onclick="openModal('iphone')"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="iPhone"><p>iPhone</p></div>
+    <div class="item" onclick="openModal('samsung')"><img src="https://images.unsplash.com/photo-1580910051072-ef1a0a8e2b5b" alt="Samsung"><p>Samsung</p></div>
+  </div>
+</div>
+
+<!-- Modals -->
+<div id="handfree" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('handfree')">&times;</span><h3>Handfree</h3><p>Price: ₹500</p></div></div>
+<div id="mobile-cover" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('mobile-cover')">&times;</span><h3>Mobile Cover</h3><p>Price: ₹300</p></div></div>
+<div id="battery" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('battery')">&times;</span><h3>Battery</h3><p>Price: ₹800</p></div></div>
+<div id="charging-pin" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('charging-pin')">&times;</span><h3>Charging Pin</h3><p>Price: ₹150</p></div></div>
+<div id="iphone" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('iphone')">&times;</span><h3>iPhone</h3><p>Price: ₹70,000</p></div></div>
+<div id="samsung" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('samsung')">&times;</span><h3>Samsung</h3><p>Price: ₹50,000</p></div></div>
+
+<script>
+function openModal(id){ document.getElementById(id).style.display='flex'; }
+function closeModal(id){ document.getElementById(id).style.display='none'; }
+window.onclick = function(event){
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal=>{ if(event.target===modal){ modal.style.display='none'; } });
+}
+</script>
+
+<footer>
+  © 2025 AR Computer and Mobile Repairing Center | WhatsApp: <a href="https://wa.me/923247182538" target="_blank" style="color:white;">0324-7182538</a>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repairs & Contact - AR Repair Center</title>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:'Arial',sans-serif; background:#f0f8ff; color:#333; line-height:1.6;}
+header {padding:50px 20px; text-align:center; color:white; background:linear-gradient(rgba(0,0,128,0.6), rgba(255,140,0,0.6)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;}
+header h1 { font-size:30px; margin-bottom:10px; }
+nav { background:#003366; display:flex; justify-content:center; flex-wrap:wrap; padding:10px 0;}
+nav a { color:white; margin:5px 15px; text-decoration:none; font-weight:bold;}
+nav a:hover { color:#ff8c00; text-decoration:underline; }
+.container { padding:20px; max-width:1200px; margin:auto; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+.item { background:#fafafa; border-radius:8px; overflow:hidden; border:1px solid #ddd; text-align:center; cursor:pointer; }
+.item img { width:100%; height:150px; object-fit:cover; }
+.item p { padding:10px 0; font-weight:bold; }
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; }
+.modal-content { background:white; padding:20px; border-radius:10px; max-width:400px; text-align:center; position:relative; }
+.close { position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer; }
+footer { background:#003366; color:white; text-align:center; padding:20px; }
+.contact { margin-top:30px; text-align:center; }
+.contact a { display:block; margin:5px 0; color:#003366; text-decoration:none; font-weight:bold; }
+.contact a:hover { color:#ff8c00; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Repairs & Contact</h1>
+  <nav>
+    <a href="computer.html">Computer Accessories</a>
+    <a href="mobile.html">Mobile Accessories</a>
+    <a href="repairs.html">Repairs</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Repairs</h2>
+  <div class="grid">
+    <div class="item" onclick="openModal('screen-repair')"><img src="https://images.unsplash.com/photo-1593005519402-001f8dc822aa" alt="Screen Repair"><p>Screen Repair</p></div>
+    <div class="item" onclick="open
